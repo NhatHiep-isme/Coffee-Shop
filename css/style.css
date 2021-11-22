@@ -1,0 +1,769 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 16px;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: .5rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 5rem;
+}
+
+body{
+    background: black;
+}
+
+
+
+
+/*-------------CSS HEADER----------*/
+.header{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #D3AD7F;
+    padding: 1rem 7%;
+    position: fixed;
+    top:0; left: 0; right: 0;
+    z-index: 1000;
+}
+
+.header .logo{
+    width: 4.5rem;
+}
+
+.header .logo:hover{
+    cursor: pointer;
+}
+
+.header .nav a{
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    margin:0 1rem;
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+.header .nav a:hover{
+    color: #D3AD7F;
+    border-bottom: 2px solid #D3AD7F;
+    padding-bottom: 0.3rem;
+}
+
+.header .icon{
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.header .icon i{
+    cursor: pointer;
+    padding-right: 1rem;
+}
+
+.header .icon i:hover{
+    color: #D3AD7F;
+}
+
+.header .icon .fa-bars{
+    display: none;
+}
+
+
+.header .search-form{
+    position: absolute;
+    top:115%; right: 8%;
+    background: #fff;
+    width: 30rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top; /*Hieu ung truot len tren*/
+}
+
+.header .search-form.active{
+    transform: scaleY(1);
+}
+
+.header .search-form input{
+    margin-left: 1rem;
+    width: 100%;
+    text-transform: none;
+}
+
+.header .search-form label{
+    margin-right: 1rem;
+}
+
+.header .search-form label:hover{
+    cursor: pointer;
+    color: #D3AD7F;
+}
+
+.header .cart-items-container{
+    position: absolute;
+    top:100%; right: -100%;
+    height: 60vh;
+    width: 20rem;
+    background: #fff;
+    padding:0 1.5rem;
+}
+
+.header .cart-items-container.active{
+    right: 0;
+}
+
+.header .cart-items-container .cart-item{
+    position: relative;
+    margin:2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.header .cart-items-container .cart-item .fa-times{
+    position: absolute;
+    top:1rem; right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: black;
+}
+
+.header .cart-items-container .cart-item .fa-times:hover{
+    color: #D3AD7F;
+}
+
+.header .cart-items-container .cart-item img{
+    height: 3rem;
+}
+
+.header .cart-items-container .cart-item .content h3{
+    font-size: 1rem;
+    color: black;
+    padding-bottom: .5rem;
+}
+
+.header .cart-items-container .cart-item .content .price{
+    font-size: 1rem;
+    color: #D3AD7F;
+}
+
+.header .cart-items-container .btn{
+    width: 100%;
+    text-align: center;
+}
+
+.header .nav-bar{
+    position: absolute;
+    top:100%; right: -100%;
+    height: 100vh;
+    width: 20rem;
+    background: #fff;
+    padding:0 1.5rem;
+}
+
+.header .nav-bar.active{
+    right: 0;
+}
+
+.nav-bar a{
+    color: black;
+    display: block;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.nav-bar a:hover{
+    color: #D3AD7F;
+}
+/*---------GENERAL CSS--------*/
+.content .btn,
+.header .cart-items-container .btn{
+    background-color: #D3AD7F;
+    color: #fff;
+    padding: 0.6rem 2rem;
+}
+
+.content .btn:hover,
+.header .cart-items-container .btn:hover{
+    letter-spacing: 2px;
+}
+
+/*------------CSS HOME------------*/
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(..//images/home-img.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content{
+    max-width: 40rem;
+    margin-left: 6.5rem;
+    color: #fff;
+}
+
+.home .content h1{
+    text-transform: uppercase;
+    font-size: 4rem;
+}
+
+.home .content p{
+    font-weight: lighter;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+    margin-bottom: 1.5rem;
+}
+
+
+
+/*------------CSS ABOUT US-----------*/
+.about .row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0rem 6.5rem;
+    background-color: #13131A;
+}
+
+.about .heading{
+    color: #D3AD7F;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 3rem; margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+.about .heading span{
+    color: #fff;
+}
+.about .row .about-img{
+    max-width: 50%;
+}
+
+.about .row .content{
+    color: #fff;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.about .row .content h1{
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+
+.about .row .content p{
+    line-height: 1.8;
+    color: #C0CCCC;
+    margin-bottom: 1.5rem;
+}
+
+/*-------------CSS MENU-----------*/
+.menu .heading{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 3rem; margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+.menu .heading span{
+    color: #D3AD7F;
+}
+
+.menu .box-container{
+    margin: 0rem 6.5rem;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 1rem;
+}
+
+.menu .box-container .box{
+    border: 1px solid rgb(78, 78, 78);
+    color: #fff;
+    text-align: center;
+    padding: 3.5rem 0rem;
+}
+
+.menu .box-container .box:hover{
+    background-color: #fff;
+    color: black;
+}
+
+.menu .box-container .box:hover > *{
+    color: black;
+}
+
+.menu .box-container .box img{
+    width: 6rem;
+}
+
+.menu .box-container .box h3{
+    padding: 1rem 0;
+    font-size: 1.3rem;
+}
+
+.menu .box-container .box .price{
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.menu .box-container .box .price span{
+    font-size: 1rem;
+    font-weight: lighter;
+    text-decoration: line-through;
+}
+
+.menu .box-container .box .btn{
+    background-color: #D3AD7F;
+    color: #fff;
+    padding: 0.6rem 2rem;
+}
+
+.menu .box-container .box .btn:hover{
+    color: black;
+    font-weight: bold;
+}
+
+/*---------------CSS PRODUCTS---------------*/
+.product .heading{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 3rem; margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.product .heading span{
+    color: #D3AD7F;
+}
+
+.product .box-container{
+    margin: 0rem 6.5rem;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1rem;
+}
+
+.product .box-container .box{
+    border: 1px solid #4E4E4E;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0rem;
+}
+
+.product .box-container .box .icons .fas{
+    color: #fff;
+    border: 1px solid #4E4E4E;
+    font-size: 1.2rem;
+    padding: 0.8rem;
+    margin: 0 0.15rem;
+}
+
+.product .box-container .box .icons .fas:hover{
+    cursor: pointer;
+    background-color: #D3AD7F;
+}
+
+.product .box-container .box .image{
+    margin-top: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.product .box-container .box .content h3{
+    font-size: 1.5rem;
+}
+
+.product .box-container .box .content .stars{
+    color: #D3AD7F;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+.product .box-container .box .content .price{
+    font-size: 1.5rem;
+}
+
+.product .box-container .box .content .price span{
+    font-size: 1rem;
+    font-weight: lighter;
+    text-decoration: line-through;
+}
+
+/*---------------CSS REVIEW---------------*/
+.review .heading{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 3rem; margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.review .heading span{
+    color: #D3AD7F;
+}
+
+.review .box-container{
+    margin: 0rem 6.5rem;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1rem;
+}
+
+.review .box-container .box{
+    border: 1px solid #4E4E4E;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0rem;
+}
+
+.review .box-container .box p{
+    font-size: 0.9rem;
+    color: #C0CCCC;
+    line-height: 1.5;
+    margin: 1.5rem 1rem;
+}
+
+.review .box-container .box .user{
+    width: 4.5rem;
+    border-radius: 50px;
+    margin-bottom: 0.5rem;
+}
+
+.review .box-container .box .stars{
+    color: #D3AD7F;
+    margin-top: 0.5rem;
+}
+
+/*-------------CSS CONTACT-------------*/
+.contact .heading{
+    color: #D3AD7F;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 3rem; margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.contact .heading span{
+    color: #fff;
+}
+
+.contact .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background-color: #13131A;
+    margin: 0 6.5rem;
+}
+
+.contact .row .map{
+    width: 42rem;
+    height: 29rem;
+}
+
+.contact .row form{
+    text-align: center;
+    width: 45%;
+    color: #fff;
+    margin: 3rem 1rem;
+}
+
+.contact .row form h3{
+    font-size: 2.3rem;
+    text-transform: uppercase;
+    padding-bottom: 1.5rem;
+}
+
+.contact .row form .inputBox{
+    text-align: left;
+    border: 1px solid #4E4E4E;
+    margin-bottom: 1rem;
+    padding: 1.3rem 1rem;
+    background-color: black;
+}
+
+.contact .row form .inputBox .fas{
+    font-size: 1.3rem;
+    margin-left: 0.5rem;
+}
+
+.contact .row form .inputBox input{
+    background: none;
+    margin-left: 1rem;
+    font-size: 1rem;
+    text-transform: none;
+}
+
+.contact .row form .btn{
+    text-align: center;
+    padding: 0.7rem 2rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    background-color: #D3AD7F;
+    color: #fff;
+}
+
+.contact .row form .btn:hover{
+    letter-spacing: 2px;
+}
+
+/*--------------CSS BLOG--------------*/
+.blog .heading{
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 3rem; margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.blog .heading span{
+    color: #D3AD7F;
+}
+
+.blog .box-container{
+    margin: 0rem 6.5rem;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1rem;
+}
+
+.blog .box-container .box{
+    border: 1px solid #4E4E4E;
+    color: #fff;
+    text-align: center;
+}
+
+.blog .box-container .box .image{
+    overflow:hidden;
+    width: 100%;
+}
+
+.blog .box-container .box .image img{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.blog .box-container .box:hover .image img{
+    transform: scale(1.2);
+}
+
+.blog .box-container .box .content{
+    margin-left: 1.2rem;
+    margin-right: 2rem;
+    text-align: left;
+    margin-top: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.blog .box-container .box .content .title{
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.blog .box-container .box .content span{
+    display: block;
+    font-size: 1.2rem;
+    color: #D3AD7F;
+    padding-top: 1rem;
+}
+
+.blog .box-container .box .content p{
+    padding-top: 1rem;
+    font-size: 1rem;
+    color: #C0CCCC;
+    padding-bottom: 2rem;
+}
+
+.blog .box-container .box .content .btn{
+    margin-bottom: 2rem;
+}
+
+/*-----------CSS FOOTER-----------*/
+.footer{
+    background-color: #13131A;
+    color: #fff;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.footer .share{
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+
+.footer .share i{
+    border-radius: 10px;
+    margin: 1rem 0.5rem;
+}
+
+.footer .credit{
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+
+.footer .credit span{
+    color: #D3AD7F;
+}
+
+
+
+
+/* media queries  */
+@media (max-width: 1300px){
+
+    html{
+        font-size: 15px;
+    }
+    .about .row,
+    .contact .row,
+    .menu .box-container,
+    .product .box-container,
+    .review .box-container,
+    .blog .box-container{
+        margin: 0 3rem;
+    }
+
+    .home .content{
+        margin-left: 3rem;
+    }
+
+    .menu .box-container{
+        grid-template-columns: auto auto auto;
+    }
+
+    .contact .row{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact .row .map{
+        width: 100%;
+    }
+}
+
+
+@media (max-width:991px){
+
+    html{
+        font-size: 14px;
+    }
+
+    .header{
+        padding: 1rem 2rem;
+    }
+
+    .header .nav a{
+        margin: 0 0.5rem;
+    }
+
+    .about .row,
+    .contact .row,
+    .menu .box-container,
+    .product .box-container,
+    .review .box-container,
+    .blog .box-container{
+        margin: 0 1rem;
+    }
+
+    .home .content{
+        margin-left: 1rem;
+    }
+
+    .menu .box-container{
+        grid-template-columns: auto auto auto;
+    }
+
+    .contact .row{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact .row .map{
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px){
+    html{
+        font-size: 13px;
+    }
+
+    .header .nav a{
+        display: none;
+    }
+
+    .header .icon .fa-bars{
+        display: inline-block;
+    }
+
+    .about .row,
+    .contact .row,
+    .menu .box-container,
+    .product .box-container,
+    .review .box-container,
+    .blog .box-container{
+        margin: 0rem;
+    }
+
+    .home .content{
+        margin-left: 1rem;
+        text-align: center;
+    }
+
+    .menu .box-container,
+    .product .box-container,
+    .review .box-container,
+    .blog .box-container{
+        grid-template-columns: auto auto;
+    }
+
+    .about .row{
+        flex-direction: column;
+    }
+
+    .about .row .about-img{
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width:450px){
+
+    html{
+        font-size: 12px;
+    }
+
+    .menu .box-container,
+    .product .box-container,
+    .review .box-container,
+    .blog .box-container{
+        grid-template-columns: auto;
+    }
+}
